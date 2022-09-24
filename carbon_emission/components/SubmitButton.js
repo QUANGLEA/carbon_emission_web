@@ -1,11 +1,12 @@
-import Link from "next/link";
-
-export default function SubmitButton({ href }) {
+export default function SubmitButton({ setIsFeedbackVisible }) {
+  const onSubmit = () => {
+    setIsFeedbackVisible(true);
+  };
   return (
-    <Link id="get-started" href={href}>
+    <button id="get-started" onClick={onSubmit}>
       <a className="bg-white h-1/2 w-full text-black p-2 rounded-lg text-center">
         Submit
       </a>
-    </Link>
+    </button>
   );
 }

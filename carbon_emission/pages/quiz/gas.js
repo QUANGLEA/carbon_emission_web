@@ -15,7 +15,7 @@ export default function Gas() {
     <div className="flex justify-center items-center h-screen w-screen bg-black text-white">
       <div className="grid grid-cols-3 grid-rows-2 gap-4 place-items-center">
         <Quiz question={question} valueDict={value} />
-        <PrevButton href="/quiz/food" className="col-span-1" />
+        <PrevButton className="col-span-1" />
         <SubmitButton href="/" className="col-span-1" />
         <NextButton href="/quiz/gas" className="col-span-1" />
       </div>
