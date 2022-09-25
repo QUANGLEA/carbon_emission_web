@@ -1,12 +1,17 @@
 import Link from "next/link";
 import Router from "next/router";
 
-export default function NextButton({ href }) {
+export default function NextButton({ href, setIsTransition }) {
+  const onNext = () => {
+    setIsTransition(true);
+    Router.push(href);
+  };
+
   return (
-    <Link href={href}>
+    <button onClick={onNext}>
       <a className="bg-white w-full h-1/2 text-black p-2 rounded-lg text-center">
         Next
       </a>
-    </Link>
+    </button>
   );
 }
