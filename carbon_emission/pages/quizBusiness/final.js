@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import FinalHeader from "../../components/FinalHeader";
-import Router from "next/router";
 import FinalFooter from "../../components/FinalFooter";
+import FinalBackground from "../../components/FinalBackground";
 
 export default function Final() {
   /* const [oneResponse, setOneResponse] = useState(3);
@@ -36,12 +36,15 @@ export default function Final() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-black text-white h-screen w-screen">
-      <FinalHeader />
-      <div>Your Score is: {score} / 5</div>
-      <div>You could do better. Here are some suggestions: </div>
-      <div>hello</div>
-      <FinalFooter href="/quiz/questionOne" />
+    <div>
+      <FinalBackground />
+      <div className="flex flex-col justify-center items-center text-white h-screen w-screen">
+        <FinalHeader />
+        <div>Your Score is: {score} / 5</div>
+        <div>You could do better. Here are some suggestions: </div>
+        <div>hello</div>
+        <FinalFooter href="/quizBusiness/questionOne" />
+      </div>
     </div>
   );
 }
