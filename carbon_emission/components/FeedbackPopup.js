@@ -1,4 +1,4 @@
-export default function FeedbackPopup({ isVisible }) {
+export default function FeedbackPopup({ isVisible, feedback }) {
   if (!isVisible) {
     return null;
   }
@@ -6,11 +6,7 @@ export default function FeedbackPopup({ isVisible }) {
   return (
     <div className="max-w-lg bg-red-600 rounded-lg flex flex-col items-center justify-content p-2">
       <div>Feedback</div>
-      <div>
-        Public transportation is a great way to conserve natural gas. If public
-        transportation isn’t a feasible or accessible option for where you live,
-        carpooling or walking are other great options!
-      </div>
+      <div>{feedback}</div>
     </div>
   );
 }
