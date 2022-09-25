@@ -11,7 +11,7 @@ export default function BusinessSummary() {
           return <SummaryCard title={title} description={DESCRIPTIONS[i]} />;
         })}
       </div>
-      <FinalFooter href="/quiz/questionOne" />
+      <FinalFooter href="/quizBusiness/questionOne" />
     </div>
   );
 }
