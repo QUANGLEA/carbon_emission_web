@@ -6,3 +6,26 @@
 :root {
   font-family: "Lato", sans-serif;
 }
+
+.leftArrow {
+  width: 10%;
+  float: left;
+  height: 100%;
+  vertical-align: center;
+  opacity: 99%;
+}
+
+.rightArrow {
+  width: 10%;
+  float: right;
+  height: 100%;
+  vertical-align: center;
+  opacity: 99%;
+}
+
+.centerBox {
+  width: 80%;
+  height: 100%;
+  vertical-align: center;
+  float: left;
+}

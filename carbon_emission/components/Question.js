@@ -36,44 +36,45 @@ export default function Question({
   return (
     <div>
       <Image
-        className="-z-10 h-screen w-screen opacity-90"
+        className="-z-10 h-screen w-screen opacity-80"
         src={image}
         quality={100}
         layout="fill"
         objectFit="cover"
       />
-      <div className="flex flex-col justify-center items-center h-screen w-screen opacity-[99.9]">
-        <div className="backdrop-blur-sm bg-white/30 text-black p-4 rounded-lg">
-          <div className="grid grid-cols-3 grid-rows-2 gap-4 place-items-center">
+      <div className="h-screen w-screen">
+        {prevURL ? (
+          <PrevButton
+            href={prevURL}
+            setIsTransition={setIsTransition}
+            className="w-1/10 z-10 float-left mt-10"
+          />
+        ) : (
+          <div className="leftArrow"></div>
+        )}
+        <div className="flex flex-col h-[60%] w-full centerBox justify-center items-center opacity-[99.9]">
+          <div className="grid w-full h-[60%] grid-rows-2 grid-cols-1 place-items-center backdrop-blur-sm bg-white/30 text-black p-4 rounded-lg">
             <Quiz
               question={question}
               questionValue={questionValue}
               setQuestionValue={setQuestionValue}
             />
-
-            {prevURL ? (
-              <PrevButton
-                href={prevURL}
-                setIsTransition={setIsTransition}
-                className="col-span-1"
-              />
-            ) : (
-              <div className="col-span-1"></div>
-            )}
-
             <SubmitButton
-              className="col-span-1"
+              className="align-center"
               setIsFeedbackVisible={setIsFeedbackVisible}
             />
-
-            <NextButton
-              href={nextURL}
-              setIsTransition={setIsTransition}
-              className="col-span-1"
-            />
           </div>
+          <FeedbackPopup
+            className="w-full"
+            isVisible={isFeedbackVisible}
+            feedback={feedback}
+          />
         </div>
-        <FeedbackPopup isVisible={isFeedbackVisible} feedback={feedback} />
+        <NextButton
+          href={nextURL}
+          setIsTransition={setIsTransition}
+          className="h-screen w-1/10 float-right z-10"
+        />
       </div>
     </div>
   );

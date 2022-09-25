@@ -1,8 +1,5 @@
 import Slider from "@mui/material/Slider";
-import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
-import Cookie from "js-cookie";
-import { getOptionsFromChildren } from "@mui/base";
 
 const VALUE_DICT = {
   1: "Strong Disagree",
@@ -31,13 +28,12 @@ export default function Quiz({ question, questionValue, setQuestionValue }) {
         {question}
       </div>
       <div className="col-span-1 align-center text-xl m-2 [font-weight:700]">
-        Strongly Agree
+        Strongly Disagree
       </div>
       <Slider
         className="h-1/4 col-span-3"
         aria-label="Small steps"
         value={questionValue}
-        // getAriaValueText={valuetext}
         onChange={(e) => valueText(e.target.value)}
         step={1}
         marks

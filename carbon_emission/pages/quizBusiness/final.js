@@ -39,7 +39,7 @@ export default function Final() {
     <div>
       <FinalBackground />
       <div className="flex flex-col justify-center items-center text-white h-screen w-screen">
-        <FinalHeader />
+        <FinalHeader isBusiness={true} />
         <div>Your Score is: {score} / 5</div>
         <div>You could do better. Here are some suggestions: </div>
         <div>hello</div>

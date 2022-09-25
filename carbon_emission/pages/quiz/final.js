@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import FinalBackground from "../../components/FinalBackground";
 import FinalFooter from "../../components/FinalFooter";
 import FinalHeader from "../../components/FinalHeader";
 
@@ -44,12 +45,21 @@ export default function Final() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center bg-black text-white h-screen w-screen">
-      <FinalHeader />
-      <div>Your Score is: {score} / 5</div>
-      <div>You could do better. Here are some suggestions: </div>
-      <div>hello</div>
-      <FinalFooter href="/quiz/questionOne" />
+    <div>
+      <FinalBackground />
+      <div className="w-screen h-screen opacity-90">
+        <FinalHeader isBusiness={false} />
+        <div className="flex flex-col justify-center items-center text-white w-full h-[80%] backdrop-blur-md bg-white/30">
+          <div className="text-black text-5xl [font-weight:700]">
+            Congratulations! You've just completeted the quiz!
+          </div>
+          <div className="text-black text-5xl [font-weight:700]">
+            Your Score is: {score} / 5
+          </div>
+          <div className="text-black text-5xl [font-weight:700]"></div>
+        </div>
+        <FinalFooter href="/quiz/questionOne" />
+      </div>
     </div>
   );
 }

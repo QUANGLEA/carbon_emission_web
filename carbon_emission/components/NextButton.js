@@ -9,7 +9,7 @@ export default function NextButton({ href, setIsTransition }) {
 
   return (
     <ArrowRightCircleIcon
-      className="w-1/2 h-1/2 col-span-1 hover:fill-cyan-700"
+      className="h-[9%] rightArrow hover:fill-cyan-700"
       href={href}
       onClick={onNext}
     >

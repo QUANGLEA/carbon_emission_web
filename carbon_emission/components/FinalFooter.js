@@ -9,16 +9,16 @@ export default function FinalFooter({ href }) {
     navigator.clipboard.writeText(copyText);
   };
   return (
-    <div>
+    <div className="w-full h-[10%]">
       <button
-        className="fixed hover:bg-cyan-500 bottom-0 right-0 bg-white text-black p-3 m-3"
+        className="hover:bg-cyan-500 float-right bg-white text-black p-3 m-3"
         onClick={() => Router.push(href)}
       >
         Take the Quiz Again
       </button>
       <button
         onClick={onCopy}
-        className="fixed hover:bg-cyan-500 bottom-0 left-0 bg-white text-black p-3 m-3"
+        className="hover:bg-cyan-500 float-left bg-white text-black p-3 m-3"
       >
         {copy ? "Copied to Clipboard" : "Copy Quiz Link"}
       </button>

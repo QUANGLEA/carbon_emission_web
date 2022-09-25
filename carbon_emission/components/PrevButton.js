@@ -10,7 +10,7 @@ export default function PrevButton({ href, setIsTransition }) {
     <ArrowLeftCircleIcon
       href={href}
       onClick={onPrev}
-      className="w-1/2 h-1/2 col-span-1 hover:fill-cyan-700"
+      className="h-[9%] hover:fill-cyan-700 leftArrow"
     >
       <a className="bg-white w-full h-1/2 text-black p-2 rounded-lg text-center">
         Previous
