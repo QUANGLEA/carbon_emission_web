@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import FinalFooter from "../../components/FinalFooter";
 import FinalHeader from "../../components/FinalHeader";
+import Router from "next/router";
+import FinalFooter from "../../components/FinalFooter";
 
 export default function Final() {
   /* const [oneResponse, setOneResponse] = useState(3);
@@ -15,14 +16,12 @@ export default function Final() {
   const [copy, setCopy] = useState(false);
 
   useEffect(() => {
-    const one = parseInt(localStorage.getItem("questionOne"));
-    const two = parseInt(localStorage.getItem("questionTwo"));
-    const three = parseInt(localStorage.getItem("questionThree"));
-    const four = parseInt(localStorage.getItem("questionFour"));
-    const five = parseInt(localStorage.getItem("questionFive"));
-    const six = parseInt(localStorage.getItem("questionSix"));
-    const seven = parseInt(localStorage.getItem("questionSeven"));
-    const eight = parseInt(localStorage.getItem("questionEight"));
+    const one = parseInt(localStorage.getItem("busiOne"));
+    const two = parseInt(localStorage.getItem("busiTwo"));
+    const three = parseInt(localStorage.getItem("busiThree"));
+    const four = parseInt(localStorage.getItem("busiFour"));
+    const five = parseInt(localStorage.getItem("busiFive"));
+
     /*     console.log(one);
     console.log(two);
     console.log(three);
@@ -31,17 +30,10 @@ export default function Final() {
     console.log(six);
     console.log(seven);
     console.log(eight); */
-    const finalScore =
-      (one + two + three + four + five + six + seven + eight) / 8;
+    const finalScore = (one + two + three + four + five) / 5;
     const roundedScore = Math.round(finalScore * 10) / 10;
     setScore(roundedScore);
   }, []);
-
-  const onCopy = () => {
-    setCopy(true);
-    const copyText = "https://carbon-emission-web.vercel.app/";
-    navigator.clipboard.writeText(copyText);
-  };
 
   return (
     <div className="flex flex-col justify-center items-center bg-black text-white h-screen w-screen">
