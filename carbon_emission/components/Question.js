@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import useFirstRender from "./useFirstRender";
 import PrevButton from "./PrevButton";
 import Image from "next/image";
-import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Question({
   questionID,
@@ -37,13 +36,13 @@ export default function Question({
   return (
     <div>
       <Image
-        className="-z-10 fixed h-screen w-screen"
+        className="-z-10 h-screen w-screen opacity-90"
         src={image}
         quality={100}
         layout="fill"
         objectFit="cover"
       />
-      <div className="flex flex-col justify-center items-center h-screen w-screen opacity-[99.9] ">
+      <div className="flex flex-col justify-center items-center h-screen w-screen opacity-[99.9]">
         <div className="backdrop-blur-sm bg-white/30 text-black p-4 rounded-lg">
           <div className="grid grid-cols-3 grid-rows-2 gap-4 place-items-center">
             <Quiz
@@ -51,6 +50,7 @@ export default function Question({
               questionValue={questionValue}
               setQuestionValue={setQuestionValue}
             />
+
             {prevURL ? (
               <PrevButton
                 href={prevURL}
