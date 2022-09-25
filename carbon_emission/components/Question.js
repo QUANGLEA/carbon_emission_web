@@ -60,7 +60,7 @@ export default function Question({
               setQuestionValue={setQuestionValue}
             />
             <SubmitButton
-              className="align-center"
+              className="h-[40%]"
               setIsFeedbackVisible={setIsFeedbackVisible}
             />
           </div>
