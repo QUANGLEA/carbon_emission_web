@@ -40,7 +40,7 @@ export default function Final() {
       <FinalBackground />
       <div className="w-screen h-screen opacity-90">
         <FinalHeader isBusiness={true} />
-        <div className="flex flex-col justify-center items-center text-white w-full h-[80%] backdrop-blur-md bg-white/30">
+        <div className="flex flex-col justify-center items-center text-white w-full h-[80%] backdrop-blur-md bg-white/50">
           <div className="text-black text-5xl [font-weight:700]">
             Congratulations! You've just completeted the quiz!
           </div>
@@ -49,7 +49,7 @@ export default function Final() {
           </div>
           <div className="text-black text-5xl [font-weight:700]"></div>
         </div>
-        <FinalFooter href="/quiz/questionOne" />
+        <FinalFooter href="/quizBusiness/questionOne" />
       </div>
     </div>
   );
