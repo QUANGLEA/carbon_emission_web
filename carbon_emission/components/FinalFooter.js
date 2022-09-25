@@ -9,7 +9,7 @@ export default function FinalFooter({ href }) {
     navigator.clipboard.writeText(copyText);
   };
   return (
-    <div className="w-full h-[10%]">
+    <div className="w-full h-[10%] footer">
       <button
         className="hover:bg-cyan-500 float-right bg-white text-black p-3 m-3"
         onClick={() => Router.push(href)}

@@ -4,14 +4,14 @@ import SummaryCard from "./SummaryCard";
 
 export default function BusinessSummary() {
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-screen">
-      <FinalHeader isBusiness={true} />
-      <div className="grid grid-rows-3 grid-cols-2 mx-5 gap-x-3 gap-y-3 place-items-center">
+    <div className="w-screen h-screen">
+      <FinalHeader className="h-[10%]" isBusiness={true} />
+      <div className="absolute grid h-[80%] scrollbar-hide grid-cols-2 mx-5 gap-x-3 gap-y-3 place-items-center summaryContainer ">
         {TITLES.map((title, i) => {
           return <SummaryCard title={title} description={DESCRIPTIONS[i]} />;
         })}
       </div>
-      <FinalFooter href="/quizBusiness/questionOne" />
+      <FinalFooter href="/quiz/questionOne" />
     </div>
   );
 }

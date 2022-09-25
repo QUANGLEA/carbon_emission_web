@@ -38,12 +38,18 @@ export default function Final() {
   return (
     <div>
       <FinalBackground />
-      <div className="flex flex-col justify-center items-center text-white h-screen w-screen">
+      <div className="w-screen h-screen opacity-90">
         <FinalHeader isBusiness={true} />
-        <div>Your Score is: {score} / 5</div>
-        <div>You could do better. Here are some suggestions: </div>
-        <div>hello</div>
-        <FinalFooter href="/quizBusiness/questionOne" />
+        <div className="flex flex-col justify-center items-center text-white w-full h-[80%] backdrop-blur-md bg-white/30">
+          <div className="text-black text-5xl [font-weight:700]">
+            Congratulations! You've just completeted the quiz!
+          </div>
+          <div className="text-black text-5xl [font-weight:700]">
+            Your Score is: {score} / 5
+          </div>
+          <div className="text-black text-5xl [font-weight:700]"></div>
+        </div>
+        <FinalFooter href="/quiz/questionOne" />
       </div>
     </div>
   );

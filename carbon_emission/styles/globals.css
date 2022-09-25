@@ -29,3 +29,28 @@
   vertical-align: center;
   float: left;
 }
+
+.summaryContainer {
+  top: 10%;
+  overflow: auto;
+}
+
+.summaryCard {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  height: 250px;
+}
+
+.header {
+  top: 0%;
+  height: 10%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  bottom: 0%;
+  height: 10%;
+  position: absolute;
+}

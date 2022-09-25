@@ -4,9 +4,9 @@ import SummaryCard from "./SummaryCard";
 
 export default function IndividualSummary() {
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-screen">
-      <FinalHeader isBusiness={false} />
-      <div className="grid grid-rows-3 h-[85%] overflow-y-auto grid-cols-2 mx-5 gap-x-3 gap-y-3 place-items-center">
+    <div className="w-screen h-screen">
+      <FinalHeader className="h-[10%]" isBusiness={false} />
+      <div className="absolute grid h-[80%] scrollbar-hide grid-cols-2 mx-5 gap-x-3 gap-y-3 place-items-center summaryContainer ">
         {TITLES.map((title, i) => {
           return <SummaryCard title={title} description={DESCRIPTIONS[i]} />;
         })}
