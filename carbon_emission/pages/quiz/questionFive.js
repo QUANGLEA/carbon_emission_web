@@ -1,4 +1,5 @@
 import Question from "../../components/Question";
+import image from "../../images/q5_image.jpg";
 
 export default function QuestionFive() {
   const QUESTION_ID = "questionFive";
@@ -14,6 +15,7 @@ export default function QuestionFive() {
       feedback={feedback}
       nextURL="/quiz/questionSix"
       prevURL="/quiz/questionFour"
+      image={image}
     />
   );
 }

@@ -26,10 +26,11 @@ export default function Quiz({ question, questionValue, setQuestionValue }) {
   }, [questionValue]);
 
   return (
-    <div className="col-span-3 grid grid-cols-3 grid-rows-3 gap-x-3 place-items-center">
-      <div className="col-span-3">{question}</div>
-      <div className="col-span-1 m-2">Strongly Agree</div>
+    <div className="col-span-3 grid grid-cols-5 grid-rows-3 gap-x-3 place-items-center">
+      <div className="col-span-5 text-3xl [font-weight:700]">{question}</div>
+      <div className="col-span-1 text-xl m-2">Strongly Agree</div>
       <Slider
+        className="h-1/4 col-span-3"
         aria-label="Small steps"
         value={questionValue}
         // getAriaValueText={valuetext}
@@ -40,8 +41,8 @@ export default function Quiz({ question, questionValue, setQuestionValue }) {
         max={Object.keys(VALUE_DICT).length}
         valueLabelDisplay="auto"
       />
-      <div className="col-span-1 m-2">Strongly Agree</div>
-      <div className="col-span-3">{value}</div>
+      <div className="col-span-1 text-xl m-2">Strongly Agree</div>
+      <div className="col-span-5 text-xl">{value}</div>
     </div>
   );
 }

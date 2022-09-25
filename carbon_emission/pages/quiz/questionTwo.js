@@ -1,11 +1,5 @@
-import Quiz from "../../components/Quiz";
-import SubmitButton from "../../components/SubmitButton";
-import NextButton from "../../components/NextButton";
-import FeedbackPopup from "../../components/FeedbackPopup";
-import { useState, useEffect, useLayoutEffect } from "react";
-import useFirstRender from "../../components/useFirstRender";
-import PrevButton from "../../components/PrevButton";
 import Question from "../../components/Question";
+import image from "../../images/q2_image.jpg";
 
 export default function QuestionTwo() {
   const QUESTION_ID = "questionTwo";
@@ -20,6 +14,7 @@ export default function QuestionTwo() {
       feedback={feedback}
       nextURL="/quiz/questionThree"
       prevURL="/quiz/questionOne"
+      image={image}
     />
   );
 }
