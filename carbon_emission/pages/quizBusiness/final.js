@@ -44,7 +44,7 @@ export default function Final() {
           <div className="text-black text-5xl [font-weight:700]">
             Congratulations! You've just completeted the quiz!
           </div>
-          <div className="text-black text-5xl [font-weight:700]">
+          <div className="text-violet-900 text-8xl [font-weight:700]">
             Your Score is: {score} / 5
           </div>
           <div className="text-black text-5xl [font-weight:700]"></div>

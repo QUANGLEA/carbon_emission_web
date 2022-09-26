@@ -73,7 +73,7 @@ export default function Question({
         <NextButton
           href={nextURL}
           setIsTransition={setIsTransition}
-          className="h-screen w-1/10 float-right z-10"
+          className="float-right z-10"
         />
       </div>
     </div>

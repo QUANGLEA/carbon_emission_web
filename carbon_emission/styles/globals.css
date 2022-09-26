@@ -8,7 +8,7 @@
 }
 
 .leftArrow {
-  width: 10%;
+  width: 5%;
   float: left;
   height: 100%;
   vertical-align: center;
@@ -16,7 +16,7 @@
 }
 
 .rightArrow {
-  width: 10%;
+  width: 5%;
   float: right;
   height: 100%;
   vertical-align: center;
@@ -24,7 +24,7 @@
 }
 
 .centerBox {
-  width: 80%;
+  width: 90%;
   height: 100%;
   vertical-align: center;
   float: left;
